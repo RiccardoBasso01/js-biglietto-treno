@@ -9,6 +9,12 @@ let ticketContent = null;
 const ticket = document.getElementById('ticket');
 console.log(ticket)
 
+const UserAge = document.getElementById('UserAge');
+console.log(UserAge)
+
+const UserKm = document.getElementById('UserKm');
+console.log(UserKm)
+
 //Chiedere il numero di km e assegnarlo ad una variaible
 const km = parseInt(prompt('Quanti km vuoi percorrere?', '250'));
 console.log(km);
@@ -46,8 +52,13 @@ if(isNaN(km) || isNaN(age)){
     //Assegno alla variabile il prezzo del biglietto arrottondando a due cifre dopo la virgola, qualora fossero presenti
     ticketContent = Math.round((priceTicket - discount) * 100) / 100 + '€';
 }
+
+console.log(km)
+console.log(age)
 //Inserisco il dato della variabile all' elemento. Se non ha soddisfatto le condizioni sarà un errore, altrimneti mostrerà il prezzo corretto
 ticket.innerText = ticketContent;
+UserKm.innerText = km;
+UserAge.innerText = age;
 
 
 
